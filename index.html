@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#715fa4">
+
+    <title>答案之书 · The Book of Answers</title>
+    <meta name="description" content="答案之书 - 你心中的疑惑，让它来回答。闭上眼睛，默念你的问题，翻开书页，答案即在眼前。">
+    <meta property="og:title" content="答案之书 · The Book of Answers">
+    <meta property="og:description" content="闭上眼睛，默念你的问题，让答案之书为你指引。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cormorant+Unicase:wght@400;500;600;700&family=Noto+Sans+SC:wght@200;300;400;500;700&family=JetBrains+Mono:wght@300;400;500&family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳到主要内容</a>
+
+    <div class="bg-layer" aria-hidden="true">
+        <div class="bg-blob bg-blob--1"></div>
+        <div class="bg-blob bg-blob--2"></div>
+        <div class="bg-blob bg-blob--3"></div>
+        <div class="bg-grain"></div>
+    </div>
+
+    <main id="main-content" class="stage" role="main">
+
+        <!-- 封面视图 -->
+        <section class="view view--cover is-active" id="viewCover" aria-labelledby="coverTitle">
+
+            <header class="masthead">
+                <p class="masthead__eyebrow">The Book of Answers</p>
+            </header>
+
+            <!-- 书本场景 -->
+            <div class="book-scene">
+                <div class="book" id="book" role="button" tabindex="0" aria-label="点击翻开答案之书">
+
+                    <!-- 封底 -->
+                    <div class="book__back"></div>
+
+                    <!-- 内页堆叠（静态） -->
+                    <div class="book__stack" aria-hidden="true">
+                        <div class="book__stack-layer book__stack-layer--6"></div>
+                        <div class="book__stack-layer book__stack-layer--5"></div>
+                        <div class="book__stack-layer book__stack-layer--4"></div>
+                        <div class="book__stack-layer book__stack-layer--3"></div>
+                        <div class="book__stack-layer book__stack-layer--2"></div>
+                        <div class="book__stack-layer book__stack-layer--1"></div>
+                    </div>
+
+                    <!-- 答案页（默认隐藏，翻开时显示） -->
+                    <div class="book__answer" id="bookAnswer">
+                        <div class="book__answer-content">
+                            <div class="page__header">
+                                <span class="page__num" id="answerPage">000</span>
+                                <span class="page__divider"></span>
+                                <span class="page__label">PAGE</span>
+                            </div>
+                            <div class="page__body">
+                                <blockquote class="page__quote" id="answerText">
+                                    答案正在揭晓……
+                                </blockquote>
+                            </div>
+                            <div class="page__footer">
+                                <span class="page__footer-text">— 答案之书 —</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 封面（可翻动） -->
+                    <div class="book__cover" id="bookCover">
+                        <div class="book__cover-front">
+                            <!-- SVG 手绘封面 -->
+                            <svg class="cover-svg" viewBox="0 0 380 520" preserveAspectRatio="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="lightGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#f4e8c8"/>
+                                        <stop offset="50%" stop-color="#e8d4a0"/>
+                                        <stop offset="100%" stop-color="#d4b870"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="24" y="24" width="332" height="472" fill="none" stroke="url(#lightGoldGrad)" stroke-width="1.5" rx="2" opacity="0.9"/>
+                                <rect x="32" y="32" width="316" height="456" fill="none" stroke="url(#lightGoldGrad)" stroke-width="0.8" opacity="0.5" rx="1"/>
+                                <g fill="none" stroke="url(#lightGoldGrad)" stroke-width="1.2" opacity="0.9">
+                                    <path d="M24,60 Q24,24 60,24"/>
+                                    <circle cx="44" cy="44" r="3" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <path d="M40,40 L48,40 M44,36 L44,44" stroke-width="0.8"/>
+                                    <path d="M320,24 Q356,24 356,60"/>
+                                    <circle cx="336" cy="44" r="3" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <path d="M332,40 L340,40 M336,36 L336,44" stroke-width="0.8"/>
+                                    <path d="M24,460 Q24,496 60,496"/>
+                                    <circle cx="44" cy="476" r="3" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <path d="M40,472 L48,472 M44,468 L44,476" stroke-width="0.8"/>
+                                    <path d="M320,496 Q356,496 356,460"/>
+                                    <circle cx="336" cy="476" r="3" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <path d="M332,472 L340,472 M336,468 L336,476" stroke-width="0.8"/>
+                                </g>
+                                <g stroke="url(#lightGoldGrad)" stroke-width="1" fill="none" opacity="0.85">
+                                    <path d="M90,110 Q190,80 290,110"/>
+                                    <path d="M120,115 Q190,95 260,115" opacity="0.5"/>
+                                    <circle cx="190" cy="95" r="5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <circle cx="190" cy="95" r="2.5" fill="#fff" stroke="none" opacity="0.8"/>
+                                    <circle cx="170" cy="100" r="1.5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <circle cx="210" cy="100" r="1.5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                </g>
+                                <g stroke="url(#lightGoldGrad)" stroke-width="1" fill="none" opacity="0.85">
+                                    <path d="M90,410 Q190,440 290,410"/>
+                                    <path d="M120,405 Q190,425 260,405" opacity="0.5"/>
+                                    <circle cx="190" cy="425" r="5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <circle cx="190" cy="425" r="2.5" fill="#fff" stroke="none" opacity="0.8"/>
+                                    <circle cx="170" cy="420" r="1.5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                    <circle cx="210" cy="420" r="1.5" fill="url(#lightGoldGrad)" stroke="none"/>
+                                </g>
+                                <g fill="url(#lightGoldGrad)" opacity="0.8">
+                                    <polygon points="105,150 107,156 113,156 108,160 110,166 105,162 100,166 102,160 97,156 103,156"/>
+                                    <polygon points="275,150 277,156 283,156 278,160 280,166 275,162 270,166 272,160 267,156 273,156"/>
+                                    <polygon points="105,370 107,376 113,376 108,380 110,386 105,382 100,386 102,380 97,376 103,376"/>
+                                    <polygon points="275,370 277,376 283,376 278,380 280,386 275,382 270,386 272,380 267,376 273,376"/>
+                                </g>
+                                <g fill="url(#lightGoldGrad)" opacity="0.6">
+                                    <circle cx="80" cy="220" r="1.5"/>
+                                    <circle cx="130" cy="190" r="1"/>
+                                    <circle cx="300" cy="230" r="1.5"/>
+                                    <circle cx="250" cy="200" r="1"/>
+                                    <circle cx="90" cy="330" r="1"/>
+                                    <circle cx="310" cy="350" r="1.5"/>
+                                    <circle cx="140" cy="395" r="1"/>
+                                    <circle cx="260" cy="395" r="1"/>
+                                </g>
+                            </svg>
+
+                            <!-- 标题文字 -->
+                            <div class="cover-text">
+                                <h1 class="cover-title" id="coverTitle">
+                                    <span class="cover-title-zh">答案之书</span>
+                                    <span class="cover-title-divider" aria-hidden="true">
+                                        <span class="cover-title-divider-icon">✦</span>
+                                    </span>
+                                    <span class="cover-title-sub">THE BOOK OF ANSWERS</span>
+                                </h1>
+                            </div>
+
+                            <!-- 封面提示 -->
+                            <div class="cover-hint">点击翻页</div>
+                        </div>
+                        <div class="book__cover-back" aria-hidden="true">
+                            <div class="book__cover-back-content">
+                                <span class="book__cover-back-icon">✦</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 提示 -->
+            <p class="hint" id="coverHint">
+                <span class="hint__icon" aria-hidden="true">✦</span>
+                默念你的问题，然后点击书本
+            </p>
+
+            <!-- 按钮组 -->
+            <div class="actions">
+                <button class="btn btn--primary" id="btnRandom" type="button" aria-describedby="coverHint">
+                    <span class="btn__label">随机翻页</span>
+                    <span class="btn__arrow" aria-hidden="true">↗</span>
+                </button>
+
+                <div class="actions__row">
+                    <label for="pageInput" class="visually-hidden">输入页码</label>
+                    <input class="input" type="number" id="pageInput"
+                           inputmode="numeric" min="1" max="500"
+                           placeholder="1 - 500" aria-label="输入页码 1 到 500">
+                    <button class="btn btn--ghost" id="btnGo" type="button">
+                        <span class="btn__label">翻到这一页</span>
+                    </button>
+                </div>
+            </div>
+
+            <p class="error-msg" id="errorMsg" role="alert" aria-live="polite"></p>
+
+            <!-- 返回封面按钮 -->
+            <button class="btn btn--return" id="btnBack" type="button" aria-label="返回封面">
+                <span class="btn__arrow btn__arrow--left" aria-hidden="true">↙</span>
+                <span class="btn__label">返回封面</span>
+            </button>
+
+            <footer class="footer">
+                <span>闭眼 · 默念 · 翻开</span>
+                <span class="footer__sep" aria-hidden="true">·</span>
+                <span>1 / 500</span>
+            </footer>
+        </section>
+
+    </main>
+
+    <script src="answers-inline.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
