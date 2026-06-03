@@ -825,9 +825,30 @@ body {
   }
 }
 
-/* 答案页始终保持米色，不跟随深色模式 */
+/* 答案页始终保持米色和深色字，不跟随深色模式 */
 .book__answer {
   background: linear-gradient(135deg, #fdfaf2 0%, #f5edd8 100%) !important;
+}
+.book__answer .page__num {
+  color: var(--c-primary) !important;
+  opacity: 0.5;
+}
+.book__answer .page__label {
+  color: var(--c-primary-2) !important;
+}
+.book__answer .page__divider {
+  background: var(--c-primary-2) !important;
+  opacity: 0.4;
+}
+.book__answer .page__quote {
+  color: #2d1f42 !important;
+}
+.book__answer .page__quote::before,
+.book__answer .page__quote::after {
+  color: var(--c-primary-3) !important;
+}
+.book__answer .page__footer-text {
+  color: var(--c-primary-2) !important;
 }
 
 @media print {
