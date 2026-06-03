@@ -815,8 +815,12 @@ body {
   }
   .input::placeholder { color: #5a4a7a; }
   .page__quote { color: #e2d8ef; }
+  /* 答案页始终保持米色，不跟随深色模式 */
   .book__answer {
-    background: linear-gradient(135deg, #2a2238 0%, #1f1830 100%);
+    background: linear-gradient(135deg, #fdfaf2 0%, #f5edd8 100%) !important;
+  }
+  .book__back {
+    background: linear-gradient(135deg, #4a3a7a 0%, #3d2f5e 100%);
   }
   .page__footer-text { color: #a791c0; }
   .btn--return {
